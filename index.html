@@ -2,486 +2,104 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Updated Portfolio</title>
     <link
-      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
     />
+    <link rel="stylesheet" href="design.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css"
+      href="https://unpkg.com/boxicons@2.1.0/css/boxicons.min.css"
     />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <link rel="shortcut icon" href="/images/726056.png"/>
-
-    <link rel="stylesheet" href="style.css" />
-    <title>Portfolio Website</title>
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand">
-        <i class="bx bx-folder-open"></i> JEK's Portfolio
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home"><i class="bx bx-home"></i> Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about"
-              ><i class="bx bx-user"></i> About</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills"
-              ><i class="bx bx-code"></i> Skills</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services"><i class="bx bx-cog"></i> Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact"
-              ><i class="bx bx-envelope"></i> Contact</a
-            >
-          </li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">MY PORTFOLIO</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-danger">
+                <a href="#" style="color: white; text-decoration: none"
+                  >Contact Me</a
+                >
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <!-- home section start -->
-    <section id="home" class="mt-5 d-flex align-items-center">
-      <div class="container">
+    <!-- Main Content -->
+    <div id="home">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6">
-            <h3 class="intro">Welcome! Hello World</h3>
-            <h2 class="name">
-              Hi, I am <span class="text-xs">Jerick Untiveros</span>
-            </h2>
-            <p class="hello">
-              I’m from Batangas City, and I am a graduating student at Batangas
-              State University - Alangilan Campus, pursuing a Bachelor of
-              Science in Information Technology majoring in Service Management.
-              I am eager to learn and explore various aspects of the IT
-              industry, especially in areas where I can enhance my skills. I
-              believe that there are many opportunities in the IT industry where
-              I can improve and contribute effectively.
+          <div class="col-md-6 offset-md-2 mt-2">
+            <h2>Hi! Welcome</h2>
+            <h3>i'm Jerick Untiveros</h3>
+            <h2 class="text-animation">a <span></span></h2>
+            <p class="quote">
+              "I aim to improve my skills and further advance in the IT
+              industry, as it's one of my aspirations and dreams to achieve."
             </p>
-          </div>
-          <div class="col-md-6">
-            <!-- Card with Image Profile -->
-            <div class="card">
-              <img
-                src="/images/photo1704848401-removebg-preview.png"
-                class="card-img-top"
-                alt="Profile Image"
-              />
-              <div class="card-body">
-                <p class="card-text">Freelancer Web Dev</p>
-              </div>
-            </div>
-            <!-- End Card with Image Profile -->
-          </div>
-        </div>
-        <a class="btn btn-primary btn-lg mt-4" href="#about">Let's Explore</a>
-      </div>
-    </section>
-    <!-- hoem section end -->
-
-    <!-- about section start -->
-    <section id="about">
-      <div class="about-container">
-        <h2 class="about-me">About Me</h2>
-        <div class="line">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="quotes">
-          <p>
-            If it doesn’t work, at least I tried. From hate programming turns to I
-            love programming!!! &#128512;
-          </p>
-        </div>
-        <div class="container-fluid">
-          <div class="row">
-            <!-- First column for the first element -->
-            <div class="col-lg-4">
-              <div class="wants">
-                <img src="/images/graduation.png" alt="" />
-                <a class="btn btn-primary btn-lg col-md-4" href="#" data-toggle="modal" data-target="#collegeModal">College</a>
-              </div>
-            </div>
-
-            <!----- modal college start -->
-            <div class="modal fade" id="collegeModal" tabindex="-1" role="dialog" aria-labelledby="collegeModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="collegeModalLabel">My College Life</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Content for the modal goes here -->
-                    <p>Hello World.....</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- Additional buttons can be added here -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!----- modal college end -->
-
-            <!-- Second column for the second element -->
-            <div class="col-lg-4">
-              <div class="wants">
-                <img src="/images/hobbies 1.png" alt="" />
-                <a class="btn btn-primary btn-lg col-md-4" href="#" data-toggle="modal" data-target="#hobbiesModal">Hobbies</a>
-              </div>
-            </div>
-            
-            <!-- Hobbies Modal -->
-            <div class="modal fade" id="hobbiesModal" tabindex="-1" role="dialog" aria-labelledby="hobbiesModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="hobbiesModalLabel">My Hobbies </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Content for the modal goes here -->
-                    <p>This is the content of the modal related to hobbies. You can share your hobbies here.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- Additional buttons can be added here -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-
-            
-            <!-- Third column for the third element -->
-            <div class="col-lg-4">
-              <div class="wants">
-                <img src="/images/family-ideal 1.png" alt="" />
-                <a class="btn btn-primary btn-lg col-md-4" href="#" data-toggle="modal" data-target="#familyModal">Family</a>
-              </div>
+            <div class="social-media-icons">
+              <a href="https://www.facebook.com/yourusername" target="_blank">
+                <i class="bx bxl-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/yourusername" target="_blank">
+                <i class="bx bxl-instagram"></i>
+              </a>
+              <a href="https://www.tiktok.com/@yourusername" target="_blank">
+                <i class="bx bxl-tiktok"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yourusername"
+                target="_blank"
+              >
+                <i class="bx bxl-linkedin"></i>
+              </a>
             </div>
           </div>
+          <div class="col-md-2 mt-6">
+            <div class="profile">
+              <img src="/images/3a81ev.jpg" alt="" class="profile-img" />
             </div>
-            
-            <!-- Family Modal -->
-            <div class="modal fade" id="familyModal" tabindex="-1" role="dialog" aria-labelledby="familyModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="familyModalLabel">My Family Life</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Content for the modal goes here -->
-                    <p>This is the content of the modal related to family. You can share information about your family life here.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <!-- Additional buttons can be added here -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-
-                <!---- family modal end ---->
-
-        
-
-      </div>
-    </section>
-    <!-- about section end -->
-
-    <!-- skills section start -->
-    <section id="skills">
-      <div class="skills-container">
-        <h2 class="about-me">MY SKILLS</h2>
-        <div class="line">
-          <div></div>
-          <div></div>
-          <div></div>
+          </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <!-- First row for the first 3 images -->
-          <div class="col-lg-4">
-            <div class="my-skills">
-              <img src="/images/web dev.png" alt="" />
-              <h4>Web Development</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                explicabo fugit, earum enim dolore repellat adipisci debitis
-                totam incidunt sed magnam doloribus sint minus culpa placeat
-                dicta vel laboriosam cupiditate.
-              </p>
-            </div>
-          </div>
+    </div>
 
-          <div class="col-lg-4">
-            <div class="my-skills">
-              <img src="/images/ms office.png" alt="" />
-              <h4>MS Office</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                explicabo fugit, earum enim dolore repellat adipisci debitis
-                totam incidunt sed magnam doloribus sint minus culpa placeat
-                dicta vel laboriosam cupiditate.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="my-skills">
-              <img src="/images/photoshop.png" alt="" />
-              <h4>Photoshop</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                explicabo fugit, earum enim dolore repellat adipisci debitis
-                totam incidunt sed magnam doloribus sint minus culpa placeat
-                dicta vel laboriosam cupiditate.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-4">
-          <!-- Second row for the remaining 3 images -->
-          <div class="col-lg-4">
-            <div class="my-skills">
-              <img src="/images/tech supp.png" alt="" />
-              <h4>Technical Support</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                explicabo fugit, earum enim dolore repellat adipisci debitis
-                totam incidunt sed magnam doloribus sint minus culpa placeat
-                dicta vel laboriosam cupiditate.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="my-skills">
-              <img src="/images/troubleshooting.png" alt="" />
-              <h4>Troubleshooting</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                explicabo fugit, earum enim dolore repellat adipisci debitis
-                totam incidunt sed magnam doloribus sint minus culpa placeat
-                dicta vel laboriosam cupiditate.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="my-skills">
-              <img src="/images/ux.jpg" alt="" />
-              <h4>UI/UX Design</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                explicabo fugit, earum enim dolore repellat adipisci debitis
-                totam incidunt sed magnam doloribus sint minus culpa placeat
-                dicta vel laboriosam cupiditate.
-              </p>
-            </div>
-          </div>
-          <!-- Repeat for the next 2 images -->
-        </div>
-      </div>
-    </section>
-    <!-- skills section end -->
-
-    <section id="services">
-      <div class="services-container">
-        <h2 class="about-me">My Services</h2>
-        <div class="line">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <!-- First row for the first 3 images -->
-          <div class="col-lg-3">
-            <div class="services-card">
-              <img src="/images/icons8-web-development-50.png" alt="" />
-              <h5>Simple Web Based</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt ut laboriosam tempora eaque maiores, eos harum culpa,
-                ratione officiis ea quaerat sed voluptatem explicabo vero!
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="services-card">
-              <img src="/images/icons8-printer-50.png" alt="" />
-              <h5>Printing Service</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt ut laboriosam tempora eaque maiores, eos harum culpa,
-                ratione officiis ea quaerat sed voluptatem explicabo vero!
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="services-card">
-              <img src="/images/icons8-mobile-50.png" alt="" />
-              <h5>Formatting Cellphone</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt ut laboriosam tempora eaque maiores, eos harum culpa,
-                ratione officiis ea quaerat sed voluptatem explicabo vero!
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3">
-            <div class="services-card">
-              <img src="/images/icons8-banner-50.png" alt="" />
-              <h5>Banner/Logo</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt ut laboriosam tempora eaque maiores, eos harum culpa,
-                ratione officiis ea quaerat sed voluptatem explicabo vero!
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-4">
-          <!-- Second row for the remaining 3 images -->
-          <div class="col-lg-3">
-            <div class="services-card">
-              <img src="/images/icons8-microsoft-365-50.png" alt="" />
-              <h5>MS Installer</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt ut laboriosam tempora eaque maiores, eos harum culpa,
-                ratione officiis ea quaerat sed voluptatem explicabo vero!
-              </p>
-            </div>
-            </div>
-
-            <div class="col-lg-3">
-              <div class="services-card">
-
-              <img src="/images/icons8-responsive-50.png" alt="" />
-              <h5>Simple Web</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt ut laboriosam tempora eaque maiores, eos harum culpa,
-                ratione officiis ea quaerat sed voluptatem explicabo vero!
-              </p>
-              </div>
-            </div>
-
-            <div class="col-lg-3">
-              <div class="services-card">
-
-              <img src="/images/icons8-tools-50.png" alt="" />
-              <h5>Troubleshoot Hardware</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt ut laboriosam tempora eaque maiores, eos harum culpa,
-                ratione officiis ea quaerat sed voluptatem explicabo vero!
-              </p>
-              </div>
-            </div>
-
-            <div class="col-lg-3">
-              <div class="services-card">
-
-              <img src="/images/icons8-resume-50.png" alt="" />
-              <h5>Resume/VC</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt ut laboriosam tempora eaque maiores, eos harum culpa,
-                ratione officiis ea quaerat sed voluptatem explicabo vero!
-              </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Repeat for the next 2 images -->
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="contact-container">
-        <h2 class="about-me">Connect With Me</h2>
-        <div class="line">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="card text-center bg-gradient-light">
-          <div class="card-body">
-            <img src="/images/photo1702293824 (1).jpeg" class="img-fluid rounded-circle mx-auto d-block" alt="">
-            <h1 class="card-title mt-2">Jerick Catapang Untiveros</h1>
-            <h5>Graduating Student as BS in Information Technology</h5>
-            <p class="card-text"> Thank You for reaching me out! Kindly direct message me on:</p>
-
-            <!-- Social media icons -->
-            <div class="mt-3">
-              <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook"></i></a> <!-- Facebook icon -->
-              <a href="https://web.telegram.org/a/" class="social-icon"><i class="fab fa-telegram"></i></a> <!-- Twitter icon -->
-              <a href="https://www.linkedin.com/feed/" class="social-icon"><i class="fab fa-linkedin"></i></a> <!-- Instagram icon -->
-              <a href="https://www.tiktok.com/" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            </div>
-          </div>
-        </div>    
-      </div> 
-    </section>
-    <footer class="footer mt-auto py-3 bg-success">
-      <div class="container text-center">
-        <span class="text-white">All Rights Reserved &copy; 2024</span>
-      </div>
-    </footer>
-    
-    
-
+    <!-- Bootstrap and JavaScript Libraries -->
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
