@@ -6,8 +6,8 @@
 
 :root {
   --primary: #0077b6;
-  --secondary: #48cae4;
-  --black: #333;
+  --secondary: #0ef;
+  --black: #000000;
   --white: #fff;
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   --dark-green: #17443a;
@@ -256,7 +256,7 @@ nav ul li a.active {
 @media screen and (max-width: 768px) {
   .container {
     padding-top: 80px;
-    height: 120vh;
+    height: 100vh;
   }
   .profile {
     width: 220px;
@@ -369,7 +369,9 @@ nav ul li a.active {
   flex: 1;
   max-width: 550px;
 }
-
+.style {
+  font-weight: bold;
+}
 .about-left img {
   width: 420px;
   height: 70vh;
@@ -653,5 +655,211 @@ nav ul li a.active {
     border-right: 15px solid var(--white);
     border-left: 0;
     left: -15px;
+  }
+}
+.skills {
+  padding: 50px 0;
+  background-image: url(./images/skills-backg.jpg);
+  height: 105vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+}
+.about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills-content {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 0 20px;
+  margin: 0;
+}
+.heading {
+  text-align: center;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+}
+.bar {
+  font-size: 35px;
+}
+
+.technical-bars .bar {
+  margin: 40px 0;
+}
+.technical-bars .bar:first-child {
+  margin-top: 0;
+}
+.technical-bars .bar:last-child {
+  margin-bottom: 0;
+}
+.technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+.technical-bars .bar .info span {
+  font-size: 18px;
+  font-weight: 500;
+  animation: showText 8.5s 1s linear forwards;
+  font-family: "Poppins", sans-serif;
+  color: var(--white);
+}
+.technical-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: var(--black);
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animateWidth 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@keyframes animateWidth {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.technical-bars .bar .progress-line span {
+  height: 100%;
+  background-color: var(--secondary);
+  position: absolute;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animateWidth 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.progress-line.html span {
+  width: 70%;
+}
+
+.progress-line.css span {
+  width: 50%;
+}
+
+.progress-line.javascript span {
+  width: 35%;
+}
+
+.progress-line.bootstrap span {
+  width: 40%;
+}
+
+.progress-line.database span {
+  width: 45%;
+}
+.progress-line.figma span {
+  width: 75%;
+}
+
+.progress-line.photoshop span {
+  width: 60%;
+}
+.progress-line.service span {
+  width: 75%;
+}
+.progress-line.troubleshooting span {
+  width: 80%;
+}
+.progress-line.format span {
+  width: 90%;
+}
+
+.progress-line span::after {
+  position: absolute;
+  padding: 1px 8px;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 15px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+  content: attr(data-content);
+}
+
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  color: var(--white);
+  border: 7px solid transparent;
+  border-bottom-width: 0;
+  border-right-width: 0;
+  border-top-color: var(--black);
+  top: -10px;
+  right: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.other-skills {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 0 20px;
+  margin: 0;
+}
+.skills-content.animated,
+.other-skills.animated {
+  animation-name: animate;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 20px 0;
+    height: auto;
+  }
+  .skills-content,
+  .other-skills {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0;
+  }
+  .heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .bar {
+    font-size: 28px;
+  }
+  .technical-bars .bar .info span {
+    font-size: 13px;
+  }
+  .progress-line span::after {
+    font-size: 12px;
+    top: -24px;
+    right: -15px;
   }
 }
