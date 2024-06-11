@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
   --primary: #0077b6;
@@ -8,32 +12,153 @@
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   --dark-green: #17443a;
   --red: #ff0000;
+  --orange: #ff4500;
 }
-body,
-html {
-  height: 93vh;
-}
-
-#home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  background-image: url("./images/desktop-wallpaper-portfolio-background-portfolio-background-portfolio-and-career-portfolio.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  margin-bottom: 0;
-}
-
+h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
   font-family: "Poppins", "serif";
 }
-.quote {
-  width: 90%;
+header {
+  display: flex;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 20px;
+  justify-content: space-around;
+  position: fixed; /* Makes the header fixed */
+  top: 0; /* Positions it at the top */
+  width: 100%; /* Ensures it spans the full width of the viewport */
+  z-index: 1000; /* Ensures it appears above other content */
+}
+.logo {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.logo h2 {
+  font-family: "Lobster", Sans-serif;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+nav ul li {
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--white);
+}
+nav ul li a:hover {
+  color: var(--primary);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+nav ul li a.active {
+  color: var(--primary);
+}
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: space-between;
+    padding: 10px;
+  }
+  nav ul {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--black);
+    gap: 0;
+    overflow: hidden;
+  }
+  nav ul li {
+    padding: 15px;
+  }
+  .menu-icon {
+    display: block;
+    font-size: 25px;
+    margin-top: 5px;
+  }
+  #menuList {
+    transition: all.4s;
+  }
+}
+/*home content*/
+.container {
+  padding-top: 120px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--black);
+  color: white;
+}
+.profile {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  box-shadow: 0 0 25px var(--secondary);
+  transition: 0.4s ease-in-out;
+  border-radius: 50%;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-name {
+  margin-top: 50px;
+}
+.name {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 3rem;
+}
+
+.welcome {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2rem;
+}
+.quotes {
+  font-size: 1.2rem;
+}
+.quotes span {
+  color: var(--primary);
+  font-style: italic;
+}
+.btn {
+  padding-top: 40px;
+  justify-content: space-evenly;
+}
+
+.colored {
+  padding: 15px 50px;
+  background-color: var(--red);
+  color: var(--white);
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.transparent {
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }
 .text-animation {
   font-size: 34px;
@@ -66,23 +191,23 @@ p {
 @keyframes words {
   0%,
   20% {
-    content: "Web Developer";
+    content: "Web Developer.";
   }
   21%,
   40% {
-    content: "UI/UX Design";
+    content: "UI/UX Design.";
   }
   41%,
   60% {
-    content: "IT Service Desk";
+    content: "IT Service Desk.";
   }
   61%,
   80% {
-    content: "Tech Support";
+    content: "Tech Support.";
   }
   81%,
   100% {
-    content: "Printer Operator";
+    content: "Printer Operator.";
   }
 }
 @keyframes typing {
@@ -110,65 +235,423 @@ p {
     width: calc(100% + 8px);
   }
 }
-.social-media-icons .bx {
-  font-size: 2rem;
-  color: var(--white);
-}
-.profile {
+.social-icons {
+  padding-top: 40px;
+  margin: 10px;
+  gap: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 17vw;
-  height: 17vw;
-  margin: auto;
 }
-
-.profile-img {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 25px var(--secondary);
-  cursor: pointer;
-  transition: 0.4s ease-in-out;
-  object-fit: cover;
+.social-icons a {
+  font-size: 2rem;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
 }
-
-.profile-img:hover {
+.social-icons a:hover {
   box-shadow: 0 0 50px var(--secondary), 0 0 100px var(--secondary);
+  transition: all 0.3s ease-in-out;
 }
-
 /*responsive*/
-@media (max-width: 1200px) {
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-top: 80px;
+    height: 120vh;
+  }
   .profile {
-    width: 20vw;
-    height: 20vw;
+    width: 220px;
+    height: 220px;
+  }
+  .quotes {
+    font-size: 1rem;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .welcome {
+    font-size: 1.3rem;
+  }
+  .colored {
+    padding: 10px 30px;
+  }
+  .btn {
+    padding-top: 20px;
+  }
+  .social-icons {
+    padding-top: 20px;
+  }
+  .social-icons a {
+    font-size: 1.7rem;
   }
 }
-
-@media (max-width: 992px) {
-  .profile {
-    width: 25vw;
-    height: 25vw;
-  }
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+/* General section layout */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
 }
 
-@media (max-width: 768px) {
-  .profile {
-    width: 30vw;
-    height: 30vw;
-  }
+/* Ensure each element starts hidden and moves into view */
+.about-left img,
+.about-right > *,
+.about-right .address ul li,
+.about-right .expertise ul li {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
-@media (max-width: 576px) {
-  .profile {
-    width: 40vw;
-    height: 40vw;
-  }
+/* Visible state for triggering animation */
+.about-section.visible .about-left img,
+.about-section.visible .about-right > *,
+.about-section.visible .about-right .address ul li,
+.about-section.visible .about-right .expertise ul li {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@media (max-width: 400px) {
-  .profile {
-    width: 50vw;
-    height: 50vw;
+/* Stagger animations with delays */
+.about-section.visible .about-left img {
+  transition-delay: 0.2s;
+}
+
+.about-section.visible .about-right > *:nth-child(1) {
+  transition-delay: 0.4s;
+}
+
+.about-section.visible .about-right > *:nth-child(2) {
+  transition-delay: 0.6s;
+}
+
+.about-section.visible .about-right > *:nth-child(3) {
+  transition-delay: 0.8s;
+}
+
+.about-section.visible .about-right .address ul li:nth-child(1) {
+  transition-delay: 1s;
+}
+
+.about-section.visible .about-right .address ul li:nth-child(2) {
+  transition-delay: 1.2s;
+}
+
+.about-section.visible .about-right .address ul li:nth-child(3) {
+  transition-delay: 1.4s;
+}
+
+.about-section.visible .about-right .expertise ul li:nth-child(1) {
+  transition-delay: 1.6s;
+}
+
+.about-section.visible .about-right .expertise ul li:nth-child(2) {
+  transition-delay: 1.8s;
+}
+
+.about-section.visible .about-right .expertise ul li:nth-child(3) {
+  transition-delay: 2s;
+}
+
+.about-section.visible .about-right .expertise ul li:nth-child(4) {
+  transition-delay: 2.2s;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+  max-width: 550px;
+}
+
+.about-left img {
+  width: 420px;
+  height: 70vh;
+  border-radius: 10px;
+  transform: scale(0.8) translateY(50px); /* Start smaller and moved down */
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.about-right ul li {
+  display: flex;
+  align-items: center;
+}
+
+.about-right h1 {
+  color: var(--black);
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.about-right p {
+  color: var(--black);
+  font-size: 1.2rem;
+}
+
+.about-right .address {
+  margin: 25px 0;
+}
+
+.about-right .address ul li {
+  margin-bottom: 5px;
+}
+
+.address .address-logo {
+  margin-right: 15px;
+  color: var(--black);
+}
+
+.about-right .expertise ul {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.expertise h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.expertise .expertise-logo {
+  font-size: 25px;
+  margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .about-left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-right {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about-right h1 {
+    font-size: 2rem;
+  }
+
+  .about-right p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .address ul {
+    align-items: center;
+  }
+  .address ul li {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  .expertise ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .address .address-logo,
+  .expertise .expertise-logo {
+    margin-left: 5px;
+  }
+
+  .address .saprater {
+    display: none;
+  }
+
+  .about-right .expertise ul {
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+.education {
+  background-color: var(--black);
+  padding: 100px 0;
+}
+
+.highlight {
+  color: var(--white);
+  text-align: center;
+  padding-bottom: 50px;
+  letter-spacing: 12px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.card {
+  padding: 15px 50px;
+  position: relative;
+  width: 50%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.card img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 32px;
+  z-index: 1;
+}
+
+.left-card {
+  left: 0;
+}
+
+.right-card {
+  left: 50%;
+}
+
+.left-card img {
+  right: -25px;
+}
+
+.right-card img {
+  left: -25px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background-color: var(--white);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.text-box {
+  background: var(--white);
+  padding: 30px 40px;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.text-box h2 {
+  font-weight: 600;
+}
+
+.text-box h2 {
+  font-weight: 600;
+}
+
+.text-box small {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+}
+
+.left-card-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid var(--white);
+  right: -15px;
+}
+
+.right-card-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid var(--white);
+  left: -15px;
+}
+
+/* Visible state for triggering animation */
+.education.visible .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animations with delays */
+.education.visible .card:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.education.visible .card:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.education.visible .card:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+.education.visible .card:nth-child(4) {
+  transition-delay: 0.8s;
+}
+
+@media screen and (max-width: 768px) {
+  .education {
+    padding-top: 10px;
+  }
+
+  .highlight {
+    padding-bottom: 0px;
+    font-size: 1.8rem;
+    letter-spacing: 8px;
+  }
+
+  .timeline::after {
+    left: 35px;
+  }
+
+  .card {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+
+  .text-box {
+    font-size: 13px;
+    padding: 20px 30px;
+  }
+
+  .right-card {
+    left: 0;
+  }
+
+  .left-card img,
+  .right-card img {
+    left: 10px;
+  }
+
+  .left-card-arrow,
+  .right-card-arrow {
+    border-right: 15px solid var(--white);
+    border-left: 0;
+    left: -15px;
   }
 }

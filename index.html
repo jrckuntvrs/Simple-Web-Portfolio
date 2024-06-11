@@ -3,103 +3,202 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Updated Portfolio</title>
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="design.css" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/boxicons@2.1.0/css/boxicons.min.css"
+      href="https://fonts.googleapis.com/css?family=Lobster&effect=shadow-multiple"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Portfolio</title>
   </head>
-
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">MY PORTFOLIO</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
+    <header>
+      <div class="logo">
+        <h2>J.C.U</h2>
+      </div>
+      <nav>
+        <ul id="menuList">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="">Skills</a></li>
+          <li><a href="">Projects</a></li>
+        </ul>
+      </nav>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+    </header>
+
+    <section class="container" id="home">
+      <div class="profile">
+        <img src="./images/image-removebg-preview (17).png" alt="" />
+      </div>
+      <div class="intro-name">
+        <h3 class="welcome">Hello! I am</h3>
+        <h2 class="name">Jerick Untiveros</h2>
+        <h3 class="text-animation">a <span></span></h3>
+        <p class="quotes">
+          I aim to improve my skills and further advance in the IT industry,
+          <span>as it's one of my aspirations and dreams to achieve.</span>
+        </p>
+      </div>
+      <div class="btn">
+        <a class="colored" href="#about">Let's Talk</a>
+        <a class="transparent" href="./Curriculum Vitae Updated.pdf" download>
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+      <div class="social-icons">
+        <hr />
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <hr />
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-left">
+        <img src="./images/photo1702292913.jpeg" alt="About Img" />
+      </div>
+
+      <div class="about-right">
+        <h3>My Story</h3>
+        <h1>Who <span style="color: red">I Am?</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+          fugiat a dolorem at similique maxime dolorum dolore enim dicta
+          voluptatibus, illum recusandae, vel optio tempore ipsum incidunt eum.
+          Aspernatur, repellendus.
+        </p>
+        <div class="address">
+          <ul>
+            <li>
+              <span class="address-logo">
+                <i class="fas fa-paper-plane"></i>
+              </span>
+              <p>Batangas City, Philippines</p>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Education</a>
+            <li>
+              <span class="address-logo">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <p>+63 905-276-4382</p>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Skills</a>
+            <li>
+              <span class="address-logo">
+                <i class="far fa-envelope"></i>
+              </span>
+              <p>iam.jrckuntvrs@gmail.com</p>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+          </ul>
+        </div>
+        <div class="expertise">
+          <h3>My Improve Learning</h3>
+          <ul>
+            <li>
+              <span class="expertise-logo">
+                <i class="fab fa-html5" style="color: #e34f26"></i>
+              </span>
+              <p>HTML</p>
             </li>
-            <li class="nav-item">
-              <button type="button" class="btn btn-danger">
-                <a href="#" style="color: white; text-decoration: none"
-                  >Contact Me</a
-                >
-              </button>
+            <li>
+              <span class="expertise-logo">
+                <i class="fab fa-css3-alt" style="color: #264de4"></i>
+              </span>
+              <p>CSS</p>
+            </li>
+            <li>
+              <span class="expertise-logo">
+                <i class="fab fa-node-js" style="color: yellow"></i>
+              </span>
+              <p>Java Script</p>
+            </li>
+            <li>
+              <span class="expertise-logo">
+                <i class="fab fa-bootstrap" style="color: #0d6efd"></i>
+              </span>
+              <p>Bootstrap</p>
             </li>
           </ul>
         </div>
       </div>
-    </nav>
+    </section>
 
-    <!-- Main Content -->
-    <div id="home">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 offset-md-2 mt-2">
-            <h2>Hi! Welcome</h2>
-            <h3>i'm Jerick Untiveros</h3>
-            <h2 class="text-animation">a <span></span></h2>
-            <p class="quote">
-              "I aim to improve my skills and further advance in the IT
-              industry, as it's one of my aspirations and dreams to achieve."
+    <section class="education" id="education">
+      <h2 class="highlight">EDUCATION</h2>
+      <div class="timeline">
+        <div class="card left-card">
+          <img src="./images/BSU.png" alt="" />
+          <div class="text-box">
+            <h2>College Graduate</h2>
+            <p>
+              Batangas State University - The National Engineering University
             </p>
-            <div class="social-media-icons">
-              <a href="https://www.facebook.com/yourusername" target="_blank">
-                <i class="bx bxl-facebook"></i>
-              </a>
-              <a href="https://www.instagram.com/yourusername" target="_blank">
-                <i class="bx bxl-instagram"></i>
-              </a>
-              <a href="https://www.tiktok.com/@yourusername" target="_blank">
-                <i class="bx bxl-tiktok"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/yourusername"
-                target="_blank"
-              >
-                <i class="bx bxl-linkedin"></i>
-              </a>
-            </div>
+            <small>SY: 2020-2024</small>
+            <span class="left-card-arrow"></span>
           </div>
-          <div class="col-md-2 mt-6">
-            <div class="profile">
-              <img src="/images/3a81ev.jpg" alt="" class="profile-img" />
-            </div>
+        </div>
+        <div class="card right-card">
+          <img src="./images/TSIS.jpg" alt="" />
+          <div class="text-box">
+            <h2>Senior High Graduate</h2>
+            <p>Tinga Sorosoro Integrated School</p>
+            <small>SY: 2020-2018</small>
+            <span class="right-card-arrow"></span>
+          </div>
+        </div>
+        <div class="card left-card">
+          <img src="./images/TSIS.jpg" alt="" />
+          <div class="text-box">
+            <h2>Junior High School Graduate</h2>
+            <p>Tinga Sorosoro Integrated School</p>
+            <small>SY: 2018-2014</small>
+            <span class="left-card-arrow"></span>
+          </div>
+        </div>
+        <div class="card right-card">
+          <img src="./images/TIES.jpg" alt="" />
+          <div class="text-box">
+            <h2>Elementary Graduate</h2>
+            <p>Tinga Itaas Elementary School</p>
+            <small>SY: 2014-2008</small>
+            <span class="right-card-arrow"></span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Bootstrap and JavaScript Libraries -->
+    <section class="skills" id="skills">
+      <h2 class="highlight">SKILLS</h2>
+    </section>
+
     <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+      integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
