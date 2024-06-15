@@ -55,14 +55,12 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: var(--white);
+  text-decoration: none;
+  padding-bottom: 5px;
 }
-nav ul li a:hover {
-  color: var(--primary);
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-}
+
 nav ul li a.active {
-  color: var(--primary);
+  border-bottom: 2px solid rgb(255, 255, 255);
 }
 .menu-icon {
   display: none;
@@ -191,11 +189,11 @@ nav ul li a.active {
 @keyframes words {
   0%,
   20% {
-    content: "Web Developer.";
+    content: "Frontend Web Developer.";
   }
   21%,
   40% {
-    content: "UI/UX Design.";
+    content: "Web Design.";
   }
   41%,
   60% {
@@ -248,7 +246,7 @@ nav ul li a.active {
   transition: all 0.3s ease-in-out;
 }
 .social-icons a:hover {
-  box-shadow: 0 0 50px var(--secondary), 0 0 100px var(--secondary);
+  filter: drop-shadow(0px 0px 10px rgba(7, 247, 255, 0.963));
   transition: all 0.3s ease-in-out;
 }
 /*responsive*/
@@ -256,7 +254,7 @@ nav ul li a.active {
 @media screen and (max-width: 768px) {
   .container {
     padding-top: 80px;
-    height: 100vh;
+    height: 105vh;
   }
   .profile {
     width: 220px;
@@ -281,6 +279,12 @@ nav ul li a.active {
     padding-top: 20px;
   }
   .social-icons a {
+    font-size: 1.7rem;
+  }
+  .text-animation {
+    font-size: 1.5rem;
+  }
+  .text-animation span {
     font-size: 1.7rem;
   }
 }
@@ -659,7 +663,7 @@ nav ul li a.active {
 }
 .skills {
   padding: 50px 0;
-  background-image: url(./images/skills-backg.jpg);
+  background-image: url(skills-backg.jpg);
   height: 105vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -745,15 +749,15 @@ nav ul li a.active {
 }
 
 .progress-line.javascript span {
-  width: 35%;
+  width: 20%;
 }
 
 .progress-line.bootstrap span {
-  width: 40%;
+  width: 30%;
 }
 
 .progress-line.database span {
-  width: 45%;
+  width: 25%;
 }
 .progress-line.figma span {
   width: 75%;
@@ -835,7 +839,7 @@ nav ul li a.active {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .skills {
     padding: 20px 0;
     height: auto;
@@ -862,4 +866,108 @@ nav ul li a.active {
     top: -24px;
     right: -15px;
   }
+}
+.services {
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgb(131, 128, 128),
+    rgba(7, 247, 255, 0.963)
+  );
+  padding-top: 80px;
+}
+.service-content {
+  margin: 0 15%;
+}
+.service-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.box-service {
+  align-items: center;
+  flex-direction: column;
+  height: 320px;
+  width: 420px;
+  background-color: var(--white);
+  padding: 10% 7%;
+  display: flex;
+  transition: 0.5s;
+  animation: animate 2s linear forwards;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  transition: transform 0.5s, background 0.5s;
+}
+.box-service:hover {
+  background-color: var(--primary);
+  transform: scale(1.5);
+  color: var(--white);
+}
+.size-icon {
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
+.box-service p {
+  text-align: justify;
+  padding-top: 10px;
+}
+.services .service-content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.services .service-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 1200px) {
+  .services {
+    height: auto;
+  }
+  .service-content {
+    margin: 5px;
+  }
+  .service-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-content {
+    margin: 5px;
+  }
+  .service-box {
+    grid-template-columns: 1fr;
+  }
+  .box-service {
+    height: auto;
+    width: 350px;
+    margin: 0 auto;
+    padding: 5% 7%;
+  }
+  .services {
+    height: auto;
+    padding-top: 30px;
+  }
+  .size-icon {
+    margin-bottom: 0px;
+    font-size: 3rem;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: gray;
+}
+
+.footer h2 {
+  font-size: 15px;
+  color: #ffffff;
 }
