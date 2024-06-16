@@ -505,7 +505,7 @@ nav ul li a.active {
 .card {
   padding: 15px 50px;
   position: relative;
-  width: 50%;
+  width: 40%;
   border-radius: 10px;
   box-sizing: border-box;
   opacity: 0;
