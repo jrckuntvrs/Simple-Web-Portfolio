@@ -101,22 +101,7 @@ document.addEventListener("scroll", function () {
     otherSkills.classList.add("animated");
   }
 });
-/*document.addEventListener("DOMContentLoaded", function () {
-  const aboutSection = document.querySelector(".services");
 
-  function onScroll() {
-    const sectionTop = aboutSection.getBoundingClientRect().top;
-    const viewportHeight = window.innerHeight;
-
-    if (sectionTop < viewportHeight - 100) {
-      // Adjust this value to control when the animation triggers
-      aboutSection.classList.add("visible");
-      window.removeEventListener("scroll", onScroll); // Remove event listener once animation is triggered
-    }
-  }
-
-  window.addEventListener("scroll", onScroll);
-});*/
 document.addEventListener("DOMContentLoaded", function () {
   const serviceContent = document.querySelector(".services .service-content");
 

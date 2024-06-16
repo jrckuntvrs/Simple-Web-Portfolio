@@ -35,7 +35,7 @@ header {
   z-index: 1000; /* Ensures it appears above other content */
 }
 .logo {
-  font-size: 1.3rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 .logo h2 {
@@ -49,7 +49,7 @@ nav ul {
 nav ul li {
   font-family: "Poppins", sans-serif;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 0 15px;
 }
 nav ul li a {
@@ -73,7 +73,7 @@ nav ul li a.active {
   }
   nav ul {
     position: absolute;
-    top: 55px;
+    top: 50px;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -96,7 +96,7 @@ nav ul li a.active {
 }
 /*home content*/
 .container {
-  padding-top: 120px;
+  padding-top: 90px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -105,8 +105,8 @@ nav ul li a.active {
   color: white;
 }
 .profile {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   margin: auto;
   box-shadow: 0 0 25px var(--secondary);
   transition: 0.4s ease-in-out;
@@ -125,15 +125,15 @@ nav ul li a.active {
 }
 .name {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .welcome {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .quotes {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .quotes span {
   color: var(--primary);
@@ -145,7 +145,7 @@ nav ul li a.active {
 }
 
 .colored {
-  padding: 15px 50px;
+  padding: 10px 50px;
   background-color: var(--red);
   color: var(--white);
   text-decoration: none;
@@ -159,7 +159,7 @@ nav ul li a.active {
   text-decoration: none;
 }
 .text-animation {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 600;
   min-width: 280px;
 }
@@ -193,15 +193,15 @@ nav ul li a.active {
   }
   21%,
   40% {
-    content: "Web Design.";
+    content: "Web Designer.";
   }
   41%,
   60% {
-    content: "IT Service Desk.";
+    content: "Future IT Professional.";
   }
   61%,
   80% {
-    content: "Tech Support.";
+    content: "NC II Passser CSS.";
   }
   81%,
   100% {
@@ -241,7 +241,7 @@ nav ul li a.active {
   justify-content: center;
 }
 .social-icons a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--white);
   transition: all 0.3s ease-in-out;
 }
@@ -253,12 +253,12 @@ nav ul li a.active {
 
 @media screen and (max-width: 768px) {
   .container {
-    padding-top: 80px;
-    height: 105vh;
+    padding-top: 120px;
+    height: 100vh;
   }
   .profile {
-    width: 220px;
-    height: 220px;
+    width: 230px;
+    height: 230px;
   }
   .quotes {
     font-size: 1rem;
@@ -397,7 +397,7 @@ nav ul li a.active {
 
 .about-right p {
   color: var(--black);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .about-right .address {
@@ -482,7 +482,7 @@ nav ul li a.active {
 }
 .education {
   background-color: var(--black);
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .highlight {
@@ -690,11 +690,11 @@ nav ul li a.active {
   letter-spacing: 5px;
 }
 .bar {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .technical-bars .bar {
-  margin: 40px 0;
+  margin: 20px 0;
 }
 .technical-bars .bar:first-child {
   margin-top: 0;
@@ -703,10 +703,10 @@ nav ul li a.active {
   margin-bottom: 0;
 }
 .technical-bars .bar .info {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 .technical-bars .bar .info span {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   animation: showText 8.5s 1s linear forwards;
   font-family: "Poppins", sans-serif;
@@ -839,7 +839,7 @@ nav ul li a.active {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .skills {
     padding: 20px 0;
     height: auto;
@@ -868,16 +868,16 @@ nav ul li a.active {
   }
 }
 .services {
-  height: 100vh;
+  height: auto;
   background: linear-gradient(
     to right,
     rgb(131, 128, 128),
     rgba(7, 247, 255, 0.963)
   );
-  padding-top: 80px;
+  padding-top: 50px;
 }
 .service-content {
-  margin: 0 15%;
+  margin: 0 5% 0 5%;
 }
 .service-box {
   display: flex;
@@ -959,7 +959,7 @@ nav ul li a.active {
     font-size: 3rem;
   }
 }
-.footer {
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -967,7 +967,7 @@ nav ul li a.active {
   background-color: gray;
 }
 
-.footer h2 {
+footer h2 {
   font-size: 15px;
   color: #ffffff;
 }
