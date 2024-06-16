@@ -891,7 +891,7 @@ nav ul li a.active {
   align-items: center;
   flex-direction: column;
   height: 320px;
-  width: 420px;
+  width: 400px;
   background-color: var(--white);
   padding: 10% 7%;
   display: flex;
