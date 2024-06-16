@@ -971,3 +971,8 @@ footer h2 {
   font-size: 15px;
   color: #ffffff;
 }
+@media screen and (max-width: 768px) {
+  footer h2 {
+    font-size: 12px;
+  }
+}
