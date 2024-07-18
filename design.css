@@ -637,6 +637,7 @@ nav ul li a.active {
     padding: 20px 30px;
   }
 
+  .left-card,
   .right-card {
     left: 0;
   }
