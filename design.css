@@ -664,7 +664,7 @@ nav ul li a.active {
 
 .skills {
   padding: 50px 0;
-  background-image: url(/images/skills-backg.jpg);
+  background-image: url(skills-backg.jpg);
   height: 105vh;
   background-position: center;
   background-repeat: no-repeat;
