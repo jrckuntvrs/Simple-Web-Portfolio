@@ -655,9 +655,8 @@ nav ul li a.active {
     left: -15px;
     z-index: 2;
   }
-
   .timeline::after {
-    z-index: 3; /* Ensure the timeline line is behind */
+    z-index: 1; /* Ensure the timeline line is behind */
   }
 }
 
