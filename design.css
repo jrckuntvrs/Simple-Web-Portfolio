@@ -14,6 +14,7 @@
   --red: #ff0000;
   --orange: #ff4500;
 }
+
 h1,
 h2,
 h3,
@@ -25,7 +26,7 @@ p {
 }
 header {
   display: flex;
-  background-color: var(--black);
+  background-color: #6a5acd;
   color: var(--white);
   padding: 20px;
   justify-content: space-around;
@@ -78,9 +79,10 @@ nav ul li a.active {
     right: 0;
     flex-direction: column;
     text-align: center;
-    background-color: var(--black);
+    background-color: #6a5acd;
     gap: 0;
     overflow: hidden;
+    height: 500px;
   }
   nav ul li {
     padding: 15px;
@@ -101,14 +103,14 @@ nav ul li a.active {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--black);
-  color: white;
+  background-color: #6a5acd;
+  color: var(--white);
 }
 .profile {
   width: 250px;
   height: 250px;
   margin: auto;
-  box-shadow: 0 0 25px var(--secondary);
+  box-shadow: 0 0 25px var(--white);
   transition: 0.4s ease-in-out;
   border-radius: 50%;
 }
@@ -136,7 +138,7 @@ nav ul li a.active {
   font-size: 0.9rem;
 }
 .quotes span {
-  color: var(--primary);
+  color: var(--black);
   font-style: italic;
 }
 .btn {
@@ -167,7 +169,7 @@ nav ul li a.active {
   position: relative;
 }
 .text-animation span::before {
-  content: "Aspiring Web Developer";
+  content: "IT Professional.";
   color: var(--secondary);
   animation: words 20s infinite;
 }
@@ -186,28 +188,13 @@ nav ul li a.active {
     border-left: 2px solid #48cae4;
   }
 }
+/*
 @keyframes words {
   0%,
   20% {
-    content: "Frontend Web Developer.";
+    content: "IT Professional.";
   }
-  21%,
-  40% {
-    content: "Web Designer.";
-  }
-  41%,
-  60% {
-    content: "Future IT Professional.";
-  }
-  61%,
-  80% {
-    content: "NC II Passser CSS.";
-  }
-  81%,
-  100% {
-    content: "Printer Operator.";
-  }
-}
+}*/
 @keyframes typing {
   10%,
   15%,
