@@ -64,7 +64,7 @@ nav ul li a.active {
   border-bottom: 2px solid rgb(255, 255, 255);
 }
 .menu-icon {
-  display: block;
+  display: none;
   cursor: pointer;
 }
 
@@ -74,7 +74,6 @@ nav ul li a.active {
 }
 
 #menuList {
-  overflow: hidden;
   transition: max-height 0.4s ease-in-out;
   max-height: 0px; /* Initially hidden */
 }
