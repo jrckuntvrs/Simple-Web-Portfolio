@@ -59,12 +59,24 @@ nav ul li a {
   text-decoration: none;
   padding-bottom: 5px;
 }
-
+nav ul li a:hover,
 nav ul li a.active {
   border-bottom: 2px solid rgb(255, 255, 255);
 }
 .menu-icon {
-  display: none;
+  display: block;
+  cursor: pointer;
+}
+
+.menu-icon i {
+  font-size: 24px;
+  transition: transform 0.4s ease-in-out;
+}
+
+#menuList {
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  max-height: 0px; /* Initially hidden */
 }
 
 @media screen and (max-width: 768px) {
@@ -74,7 +86,7 @@ nav ul li a.active {
   }
   nav ul {
     position: absolute;
-    top: 50px;
+    top: 43px;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -89,11 +101,6 @@ nav ul li a.active {
   }
   .menu-icon {
     display: block;
-    font-size: 25px;
-    margin-top: 5px;
-  }
-  #menuList {
-    transition: all.4s;
   }
 }
 /*home content*/

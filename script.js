@@ -1,13 +1,18 @@
 let menuList = document.getElementById("menuList");
-menuList.style.maxHeight = "0px";
+let menuIcon = document.getElementById("menuIcon");
 
 function toggleMenu() {
-  if (menuList.style.maxHeight == "0px") {
-    menuList.style.maxHeight = "300px";
+  if (menuList.style.maxHeight === "0px") {
+    menuList.style.maxHeight = "600px"; // Expand the menu
+    menuIcon.classList.remove("fa-bars");
+    menuIcon.classList.add("fa-times"); // Change to "X" icon
   } else {
-    menuList.style.maxHeight = "0px";
+    menuList.style.maxHeight = "0px"; // Collapse the menu
+    menuIcon.classList.remove("fa-times");
+    menuIcon.classList.add("fa-bars"); // Change back to "bars" icon
   }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
   const menuLinks = document.querySelectorAll("#menuList .menu-link");
