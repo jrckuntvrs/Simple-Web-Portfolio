@@ -86,7 +86,7 @@ nav ul li a.active {
   }
   nav ul {
     position: absolute;
-    top: 43px;
+    top: 40px;
     left: 0;
     right: 0;
     flex-direction: column;
