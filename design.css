@@ -26,7 +26,7 @@ p {
 }
 header {
   display: flex;
-  background-color: #6a5acd;
+  background-color: gray;
   color: var(--white);
   padding: 20px;
   justify-content: space-around;
@@ -90,7 +90,7 @@ nav ul li a.active {
     right: 0;
     flex-direction: column;
     text-align: center;
-    background-color: #6a5acd;
+    background-color: gray;
     gap: 0;
     overflow: hidden;
     height: 500px;
@@ -109,13 +109,14 @@ nav ul li a.active {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #6a5acd;
+  background-color: #fff;
   color: var(--white);
 }
 .profile {
   width: 250px;
   height: 250px;
   margin: auto;
+  margin-top: 50px;
   box-shadow: 0 0 25px var(--white);
   transition: 0.4s ease-in-out;
   border-radius: 50%;
@@ -130,10 +131,12 @@ nav ul li a.active {
 
 .intro-name {
   margin-top: 50px;
+  color: var(--black);
 }
 .name {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 2rem;
+  letter-spacing: 3px;
 }
 
 .welcome {
@@ -162,7 +165,7 @@ nav ul li a.active {
   font-size: 1rem;
 }
 .transparent {
-  color: var(--white);
+  color: var(--black);
   font-family: "Poppins", sans-serif;
   text-decoration: none;
 }
@@ -252,6 +255,7 @@ nav ul li a.active {
   .profile {
     width: 230px;
     height: 230px;
+    margin-top: 0;
   }
   .quotes {
     font-size: 1rem;
