@@ -28,7 +28,7 @@ header {
   display: flex;
   background-color: gray;
   color: var(--white);
-  padding: 20px;
+  padding: 10px;
   justify-content: space-around;
   position: fixed; /* Makes the header fixed */
   top: 0; /* Positions it at the top */
@@ -113,20 +113,17 @@ nav ul li a.active {
   color: var(--white);
 }
 .profile {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   margin: auto;
-  margin-top: 50px;
   box-shadow: 0 0 25px var(--white);
   transition: 0.4s ease-in-out;
-  border-radius: 50%;
 }
 
 .profile img {
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 110%;
+  height: 110%;
 }
 
 .intro-name {
@@ -152,22 +149,24 @@ nav ul li a.active {
 }
 .btn {
   padding-top: 40px;
-  justify-content: space-evenly;
+  margin: 10px;
 }
 
 .colored {
-  padding: 8px 30px;
+  padding: 8px 50px;
   background-color: var(--red);
   color: var(--white);
   text-decoration: none;
   font-family: "Poppins", sans-serif;
-  border-radius: 5px;
+  border-radius: 3px;
   font-size: 1rem;
+  margin: 10px;
 }
 .transparent {
   color: var(--black);
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+  margin: 10px;
 }
 .text-animation {
   font-size: 28px;
@@ -249,12 +248,12 @@ nav ul li a.active {
 
 @media screen and (max-width: 768px) {
   .container {
-    padding-top: 120px;
+    padding-top: 100px;
     height: 100vh;
   }
   .profile {
-    width: 230px;
-    height: 230px;
+    width: 250px;
+    height: 250px;
     margin-top: 0;
   }
   .quotes {
@@ -411,10 +410,17 @@ nav ul li a.active {
 }
 
 .about-right .expertise ul {
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+}
+
+.about-right .expertise li {
+  display: flex; /* Align icon and text horizontally */
+  align-items: center; /* Center icon and text vertically */
+  margin: 0 10px; /* Horizontal margin between items */
 }
 
 .expertise h3 {
@@ -423,8 +429,10 @@ nav ul li a.active {
 }
 
 .expertise .expertise-logo {
-  font-size: 25px;
+  font-size: 25px; /* Icon size */
+  margin-right: 8px; /* Space between the icon and the text */
 }
+
 @media screen and (max-width: 768px) {
   .about-section {
     flex-direction: column;
@@ -653,7 +661,8 @@ nav ul li a.active {
     z-index: 2;
   }
   .timeline::after {
-    z-index: 1; /* Ensure the timeline line is behind */
+    z-index: 1;
+    background-color: transparent;
   }
 }
 
@@ -868,7 +877,7 @@ nav ul li a.active {
 .services {
   width: 100%;
   align-items: center;
-  padding: 60px 0;
+  padding: 30px 0;
   background: linear-gradient(
     to right,
     rgb(131, 128, 128),
@@ -962,28 +971,29 @@ nav ul li a.active {
 .works {
   width: 80%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 .item-links {
-  width: 60%;
-  margin: 40px auto;
+  width: 100%;
+  margin: 30px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
   color: var(--white);
   font-family: "Poppins", sans-serif;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background: transparent;
+  cursor: pointer;
 }
 .item-link {
-  border: 1px solid var(--orange);
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 30px;
   font-weight: 500;
-  transition: 0.4s ease;
+  transition: 0.2s ease;
 }
-.menu-active,
-.item-link:hover {
+.menu-active {
   background-color: var(--orange);
 }
 img {
@@ -1026,7 +1036,7 @@ img {
   position: absolute;
   top: 100%;
   left: 0;
-  background: linear-gradient(transparent, #007bff);
+  background: linear-gradient(transparent, #285483);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1036,6 +1046,10 @@ img {
 }
 .details h4 {
   font-size: 20px;
+  color: var(--white);
+}
+.details p {
+  font-size: 10px;
   color: var(--white);
 }
 .btn-details {
@@ -1089,7 +1103,6 @@ img {
 }
 @media screen and (max-width: 600px) {
   .item-links {
-    gap: 20px;
     flex-wrap: wrap;
   }
   .photo_img {
