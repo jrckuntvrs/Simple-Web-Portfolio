@@ -111,7 +111,7 @@ nav ul li a:hover {
   }
   nav {
     position: absolute;
-    left: -280px;
+    :-280px ;
     top: 0;
     z-index: 15;
     width: 280px;
