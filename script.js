@@ -1,42 +1,7 @@
-let menuList = document.getElementById("menuList");
-let menuIcon = document.getElementById("menuIcon");
-
-function toggleMenu() {
-  if (menuList.style.maxHeight === "0px") {
-    menuList.style.maxHeight = "600px"; // Expand the menu
-    menuIcon.classList.remove("fa-bars");
-    menuIcon.classList.add("fa-times"); // Change to "X" icon
-  } else {
-    menuList.style.maxHeight = "0px"; // Collapse the menu
-    menuIcon.classList.remove("fa-times");
-    menuIcon.classList.add("fa-bars"); // Change back to "bars" icon
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll("section");
-  const menuLinks = document.querySelectorAll("#menuList .menu-link");
-
-  function setActiveLink() {
-    let currentSection = "";
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 60) {
-        currentSection = section.getAttribute("id");
-      }
-    });
-
-    menuLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href").includes(currentSection)) {
-        link.classList.add("active");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", setActiveLink);
+document.querySelector(".close-btn").addEventListener("click", function () {
+  document.getElementById("nav_check").checked = false;
 });
+
 document.querySelectorAll("#menuList li a").forEach((item) => {
   item.addEventListener("click", function () {
     menuList.style.maxHeight = "0px";

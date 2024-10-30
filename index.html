@@ -38,7 +38,11 @@
       <div class="logo">
         <h2>J.C.U</h2>
       </div>
+      <input type="checkbox" id="nav_check" hidden />
       <nav>
+        <div class="close-btn">&times;</div>
+        <!-- Close Button -->
+
         <ul id="menuList">
           <li><a href="#home" class="menu-link">Home</a></li>
           <li><a href="#about" class="menu-link">About</a></li>
@@ -47,9 +51,11 @@
           <li><a href="#services" class="menu-link">Services</a></li>
         </ul>
       </nav>
-      <div class="menu-icon">
-        <i class="fa-solid fa-bars" id="menuIcon" onclick="toggleMenu()"></i>
-      </div>
+      <label for="nav_check" class="list">
+        <div class="bar 1"></div>
+        <div class="bar 2"></div>
+        <div class="bar 3"></div>
+      </label>
     </header>
 
     <section class="container" id="home">
@@ -57,8 +63,9 @@
         <img src="download.png" alt="" />
       </div>
       <div class="intro-name">
-        <h3 class="welcome">Hello! I am</h3>
-        <h2 class="name">Jerick Untiveros</h2>
+        <h3 class="welcome">
+          Hello! I am, <span class="name">Jerick Untiveros</span>
+        </h3>
         <h3 class="text-animation">aspiring <span></span></h3>
         <p class="quotes">
           I aim to improve my skills and further advance in the IT industry,
