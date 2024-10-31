@@ -8,6 +8,58 @@ document.querySelectorAll("#menuList li a").forEach((item) => {
   });
 });
 
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+
+  if (window.scrollY > lastScrollY) {
+    // Scrolling down - hide the header
+    header.style.transform = "translateY(-100%)";
+  } else {
+    // Scrolling up - show the header
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScrollY = window.scrollY;
+});
+
+const nav = document.querySelector("nav");
+const menuLinks = document.querySelectorAll(".menu-link");
+const closeBtn = document.querySelector(".close-btn");
+const hamburgerIcon = document.querySelector(".list");
+const navCheck = document.getElementById("nav_check");
+
+// Open the navigation when the hamburger icon is clicked
+hamburgerIcon.addEventListener("click", () => {
+  nav.style.right = "0"; // Slide in the nav
+});
+
+// Close the navigation when any link is clicked
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    closeNav();
+  });
+});
+
+// Close the navigation when the close button is clicked
+closeBtn.addEventListener("click", () => {
+  closeNav();
+});
+
+// Function to close the navigation
+function closeNav() {
+  nav.style.right = "-280px"; // Slide out the nav
+  navCheck.checked = false; // Uncheck the checkbox to show the hamburger icon again
+}
+
+// Close the navigation when the user scrolls
+window.addEventListener("scroll", () => {
+  if (navCheck.checked) {
+    closeNav(); // Call closeNav function if nav is open
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const aboutSection = document.querySelector(".about-section");
 
