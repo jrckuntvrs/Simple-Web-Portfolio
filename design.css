@@ -35,10 +35,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  border-radius: 0 0 10px 10px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   margin: 0 auto;
-  position: fixed; /* Make it fixed to stay at the top */
   top: 0;
   left: 0;
   right: 0;
@@ -62,8 +59,8 @@ nav ul {
 nav ul li {
   font-family: "Poppins", sans-serif;
   display: inline-block;
-  font-size: 1rem;
-  margin: -10px 20px;
+  font-size: 0.9rem;
+  margin: -10px 15px;
 }
 nav ul li a {
   text-decoration: none;
@@ -746,7 +743,7 @@ nav ul li a:hover {
 
 .skills {
   padding: 50px 0;
-  background-image: url(skills-backg.jpg);
+  background-color: var(--black);
   height: 105vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -1191,16 +1188,25 @@ img {
   }
 }
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: gray;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0 0 10px;
+  bottom: 0;
+  width: 100%;
 }
 
 footer h2 {
   font-size: 15px;
   color: #ffffff;
+}
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 @media screen and (max-width: 768px) {
   footer h2 {
