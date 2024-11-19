@@ -514,9 +514,7 @@ nav ul li a:hover {
     flex-direction: column;
     height: auto;
   }
-  .about-left {
-    padding-top: 25px;
-  }
+
   .about-left img {
     width: 100%;
     height: auto;
