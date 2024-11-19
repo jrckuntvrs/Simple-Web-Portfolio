@@ -31,6 +31,7 @@ header {
   width: 75%;
   height: 65px;
   background: #fefefe;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,10 +104,10 @@ nav ul li a:hover {
 
 @media screen and (max-width: 868px) {
   header {
-    width: 90%;
+    width: 100%;
     padding: 0 20px;
     z-index: 10;
-    height: 60px;
+    height: 50px;
   }
   .logo {
     display: block;
@@ -181,7 +182,7 @@ nav ul li a:hover {
 
 /*home content*/
 .container {
-  padding-top: 50px;
+  padding-top: 70px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -513,7 +514,9 @@ nav ul li a:hover {
     flex-direction: column;
     height: auto;
   }
-
+  .about-left {
+    padding-top: 25px;
+  }
   .about-left img {
     width: 100%;
     height: auto;
