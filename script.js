@@ -8,22 +8,6 @@ document.querySelectorAll("#menuList li a").forEach((item) => {
   });
 });
 
-let lastScrollY = window.scrollY;
-
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-
-  if (window.scrollY > lastScrollY) {
-    // Scrolling down - hide the header
-    header.style.transform = "translateY(-100%)";
-  } else {
-    // Scrolling up - show the header
-    header.style.transform = "translateY(0)";
-  }
-
-  lastScrollY = window.scrollY;
-});
-
 const nav = document.querySelector("nav");
 const menuLinks = document.querySelectorAll(".menu-link");
 const closeBtn = document.querySelector(".close-btn");
