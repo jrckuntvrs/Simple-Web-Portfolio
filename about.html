@@ -45,7 +45,193 @@
 
     <title>Portfolio Website</title>
   </head>
+  <style>
+    /* General Layout */
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    /* General section layout */
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
 
+    .about-section.visible .about-left img,
+    .about-section.visible .about-right > *,
+    .about-section.visible .about-right .address ul li,
+    .about-section.visible .about-right .expertise ul li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about-section.visible .about-left img {
+      transition-delay: 0.2s;
+    }
+
+    .about-section.visible .about-right > *:nth-child(1) {
+      transition-delay: 0.4s;
+    }
+
+    .about-section.visible .about-right > *:nth-child(2) {
+      transition-delay: 0.6s;
+    }
+
+    .about-section.visible .about-right > *:nth-child(3) {
+      transition-delay: 0.8s;
+    }
+
+    .about-section.visible .about-right .address ul li:nth-child(1) {
+      transition-delay: 1s;
+    }
+
+    .about-section.visible .about-right .address ul li:nth-child(2) {
+      transition-delay: 1.2s;
+    }
+
+    .about-section.visible .about-right .address ul li:nth-child(3) {
+      transition-delay: 1.4s;
+    }
+
+    .about-section.visible .about-right .expertise ul li:nth-child(1) {
+      transition-delay: 1.6s;
+    }
+
+    .about-section.visible .about-right .expertise ul li:nth-child(2) {
+      transition-delay: 1.8s;
+    }
+
+    .about-section.visible .about-right .expertise ul li:nth-child(3) {
+      transition-delay: 2s;
+    }
+
+    .about-section.visible .about-right .expertise ul li:nth-child(4) {
+      transition-delay: 2.2s;
+    }
+
+    .about-left,
+    .about-right {
+      flex: 1;
+      max-width: 450px;
+    }
+    .style {
+      font-weight: bold;
+    }
+    .about-left img {
+      width: 330px;
+      height: 65vh;
+      border-radius: 10px;
+    }
+
+    .about-right ul li {
+      display: flex;
+      align-items: center;
+    }
+
+    .about-right h1 {
+      color: var(--black);
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    .about-right p {
+      color: var(--black);
+      font-size: 0.9rem;
+    }
+
+    .about-right .address {
+      margin: 25px 0;
+    }
+
+    .about-right .address ul li {
+      margin-bottom: 5px;
+    }
+
+    .address .address-logo {
+      margin-right: 15px;
+      color: var(--black);
+    }
+
+    .about-right .expertise ul {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    .about-right .expertise li {
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+    }
+
+    .expertise h3 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .expertise .expertise-logo {
+      font-size: 25px;
+      margin-right: 8px;
+    }
+    @media screen and (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .about-left img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-right {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .about-right h1 {
+        font-size: 2rem;
+      }
+
+      .about-right p {
+        font-size: 1rem;
+        text-align: justify;
+      }
+      .address ul {
+        align-items: center;
+      }
+      .address ul li {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+      }
+      .expertise ul li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .address .address-logo,
+      .expertise .expertise-logo {
+        margin-left: 5px;
+      }
+
+      .address .saprater {
+        display: none;
+      }
+
+      .about-right .expertise ul {
+        align-items: flex-start;
+        width: 100%;
+      }
+    }
+  </style>
   <body>
     <header>
       <div class="logo">
@@ -59,7 +245,7 @@
         <ul id="menuList">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="education.html">Education</a></li>
+          <li><a href="credentials.html">Credentials</a></li>
           <li><a href="skills.html">Skills</a></li>
           <li><a href="services.html">Services</a></li>
         </ul>
@@ -70,7 +256,7 @@
         <div class="bar 3"></div>
       </label>
     </header>
-    <!--
+
     <section class="about-section">
       <div class="about-left">
         <img src="photo1718112462.jpeg" alt="About Img" />
@@ -154,7 +340,7 @@
             <li>
               <span class="expertise-logo">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/732/732244.png"
+                  src="https://www.rapidbrains.com/assets/img/services/rapidbrains-ionic.webp"
                   alt="Ionic Framework"
                   style="height: 24px; width: 24px"
                 />
@@ -165,7 +351,6 @@
         </div>
       </div>
     </section>
--->
     <script src="script.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
@@ -173,23 +358,5 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const aboutSection = document.querySelector(".about-section");
-
-        function triggerAnimation() {
-          // Check if the URL hash is #about
-          if (window.location.hash === "#about") {
-            aboutSection.classList.add("visible");
-          }
-        }
-
-        // Check on page load
-        triggerAnimation();
-
-        // Add hashchange listener for link navigation
-        window.addEventListener("hashchange", triggerAnimation);
-      });
-    </script>
   </body>
 </html>

@@ -42,19 +42,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-document.addEventListener("scroll", function () {
-  var skillsContent = document.querySelector(".skills-content");
-  var otherSkills = document.querySelector(".other-skills");
-  var skillsContentPosition = skillsContent.getBoundingClientRect().top;
-  var otherSkillsPosition = otherSkills.getBoundingClientRect().top;
-  var windowHeight = window.innerHeight;
-
-  if (skillsContentPosition < windowHeight) {
-    skillsContent.classList.add("animated");
-  }
-  if (otherSkillsPosition < windowHeight) {
-    otherSkills.classList.add("animated");
-  }
-});
 */
