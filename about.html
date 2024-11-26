@@ -45,6 +45,7 @@
 
     <title>Portfolio Website</title>
   </head>
+
   <body>
     <header>
       <div class="logo">
@@ -56,11 +57,11 @@
         <!-- Close Button -->
 
         <ul id="menuList">
-          <li><a href="./index.html" class="menu-link">Home</a></li>
-          <li><a href="./about.html" class="menu-link">About</a></li>
-          <li><a href="./education.html" class="menu-link">Education</a></li>
-          <li><a href="./skills.html" class="menu-link">Skills</a></li>
-          <li><a href="./services.html" class="menu-link">Services</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="services.html">Services</a></li>
         </ul>
       </nav>
       <label for="nav_check" class="list">
@@ -69,8 +70,8 @@
         <div class="bar 3"></div>
       </label>
     </header>
-
-    <section class="about-section" id="about">
+    <!--
+    <section class="about-section">
       <div class="about-left">
         <img src="photo1718112462.jpeg" alt="About Img" />
       </div>
@@ -79,19 +80,17 @@
         <h3>My Story</h3>
         <h1>Who <span style="color: red">I Am?</span></h1>
         <p>
-          Hi&#128513;! I graduated student from Batangas State University - The
-          National Engineering University of BS in Information Technology with
-          major of Service Management. Why I pursue IT? It's not because of
-          indemand work or job, just because I want to learn a lot when it comes
-          about IT especially
+          Hi&#128513;! I am a graduate from Batangas State University - The
+          National Engineering University with a BS in Information Technology,
+          majoring in Service Management. I pursued IT because I enjoy learning
+          about
           <span class="style"
             >Programming, Computer Hardware, Software, Networking,
             Designing</span
-          >, something that I would be interested to understand.
+          >, and other related fields.
         </p>
         <div class="address">
           <h2>Contact Me on:</h2>
-
           <ul>
             <li>
               <span class="address-logo">
@@ -130,9 +129,9 @@
             </li>
             <li>
               <span class="expertise-logo">
-                <i class="fa-brands fa-js" style="color: yellow"></i>
+                <i class="fab fa-js" style="color: yellow"></i>
               </span>
-              <p>Javascript</p>
+              <p>JavaScript</p>
             </li>
             <li>
               <span class="expertise-logo">
@@ -146,17 +145,16 @@
               </span>
               <p>MySQL</p>
             </li>
-
             <li>
               <span class="expertise-logo">
-                <i class="fa-brands fa-php" style="color: #8993be"></i>
+                <i class="fab fa-php" style="color: #8993be"></i>
               </span>
               <p>PHP</p>
             </li>
             <li>
               <span class="expertise-logo">
                 <img
-                  src="https://cdck-file-uploads-global.s3.dualstack.us-west-2.amazonaws.com/ionicframework/original/3X/a/4/a488f17e4616738ff04531ef23fa4572a4659d64.png"
+                  src="https://cdn-icons-png.flaticon.com/512/732/732244.png"
                   alt="Ionic Framework"
                   style="height: 24px; width: 24px"
                 />
@@ -167,7 +165,7 @@
         </div>
       </div>
     </section>
-
+-->
     <script src="script.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
@@ -175,5 +173,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const aboutSection = document.querySelector(".about-section");
+
+        function triggerAnimation() {
+          // Check if the URL hash is #about
+          if (window.location.hash === "#about") {
+            aboutSection.classList.add("visible");
+          }
+        }
+
+        // Check on page load
+        triggerAnimation();
+
+        // Add hashchange listener for link navigation
+        window.addEventListener("hashchange", triggerAnimation);
+      });
+    </script>
   </body>
 </html>

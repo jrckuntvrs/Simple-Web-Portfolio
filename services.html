@@ -129,5 +129,50 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script>
+      let filterItem = document.querySelector(".item-links");
+      let filterImages = document.querySelectorAll(".img-link");
+
+      window.addEventListener("load", () => {
+        filterItem.addEventListener("click", (selectedItem) => {
+          if (selectedItem.target.classList.contains("item-link")) {
+            document
+              .querySelector(".menu-active")
+              .classList.remove("menu-active");
+            selectedItem.target.classList.add("menu-active");
+            let filterName = selectedItem.target.getAttribute("data-name");
+            filterImages.forEach((image) => {
+              let imageFilterName = image.getAttribute("data-name");
+              if (imageFilterName === filterName || filterName === "all") {
+                image.style.display = "block";
+              } else {
+                image.style.display = "none";
+              }
+            });
+          }
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const serviceContent = document.querySelector(
+          ".services .service-content"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                serviceContent.classList.add("visible");
+                observer.unobserve(entry.target); // Stop observing once the element is visible
+              }
+            });
+          },
+          {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+          }
+        );
+
+        observer.observe(serviceContent);
+      });
+    </script>
   </body>
 </html>
